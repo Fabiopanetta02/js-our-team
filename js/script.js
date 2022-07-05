@@ -8,10 +8,15 @@ Creare l’array di oggetti con le informazioni fornite.
 //# MILESTONE 1:
 Stampare su console le informazioni di nome, ruolo e la stringa della foto
 
-# MILESTONE 2:
+//# MILESTONE 2:
 Stampare le stesse informazioni su DOM sottoforma di stringhe
-*/
 
+//# BONUS 1:
+Trasformare la stringa foto in una immagine effettiva (le trovate in allegato)
+
+//# BONUS 2:
+Organizzare i singoli membri in card/schede e ispirarci alle grafiche in allegato
+*/
 
 //RECUPERO GLI ELEMENTI DAL DOM
 const boardTeam = document.getElementById('board-team');
@@ -21,52 +26,60 @@ const team = [
     {
         name: 'Wayne Barnett',
         role: 'Founder & CEO',
-        img: 'wayne-barnett-founder-ceo.jpg',
+        img: 'img/wayne-barnett-founder-ceo.jpg',
     },
     {
         name: 'Angela Caroll',
         role: 'Chief Editor',
-        img: 'angela-caroll-chief-editor.jpg',
+        img: 'img/angela-caroll-chief-editor.jpg',
     },
     {
         name: 'Walter Gordon',
         role: 'Office Manager',
-        img: 'walter-gordon-office-manager.jpg',
+        img: 'img/walter-gordon-office-manager.jpg',
     },
     {
         name: 'Angela Lopez',
         role: 'Social Media Manager',
-        img: 'angela-lopez-social-media-manager.jpg',
+        img: 'img/angela-lopez-social-media-manager.jpg',
     },
     {
         name: 'Scott Estrada',
         role: 'Developer',
-        img: 'scott-estrada-developer.jpg',
+        img: 'img/scott-estrada-developer.jpg',
     },
     {
         name: 'Barbara Ramos',
         role: 'Graphic Designer',
-        img: 'barbara-ramos-graphic-designer.jpg',
+        img: 'img/barbara-ramos-graphic-designer.jpg',
     }
 
 ];
 
-//2-Stampo su console le informazioni di nome, ruolo e la stringa della foto
+
+//3-Stampo le stesse informazioni su DOM sottoforma di stringhe
 let message = '';
 
 for(let i = 0; i < team.length; i++){
     const currentTeam = team[i];
-    message += `<li>--------PERSONA--------</li>`;
+    
+    //Montaggio tag li
+    message += 
+    `<li>
+        <img src="${currentTeam.img}" alt="">
+        <div class="description">
+            <h5 class="name-person">${currentTeam.name}</h5>
+            <p class="description-person">${currentTeam.role}</p>
+        </div>
+    </li>
+    <br>`;
+    
+    //2-Stampo su console le informazioni di nome, ruolo e la stringa della foto
     console.log('--------PERSONA--------');
-
-    message += `<li>name: ${currentTeam.name}</li>`;
     console.log('name: ' + currentTeam.name);
-
-    message += `<li>role: ${currentTeam.role}</li>`;
     console.log('role: ' + currentTeam.role);
-
-    message += `<li>img: ${currentTeam.img}</li><br>`;
     console.log('img: ' + currentTeam.img);
 }
 
+//3-
 boardTeam.innerHTML = message;
