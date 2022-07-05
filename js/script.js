@@ -2,7 +2,7 @@
 Utilizzando i dati forniti, creare un array di oggetti per rappresentare i membri del team.
 Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
 
-# MILESTONE 0:
+//# MILESTONE 0:
 Creare l’array di oggetti con le informazioni fornite.
 
 # MILESTONE 1:
@@ -46,4 +46,13 @@ const team = [
         img: 'barbara-ramos-graphic-designer.jpg',
     }
 
-]
+];
+
+//2-Stampo su console le informazioni di nome, ruolo e la stringa della foto
+for(let i = 0; i < team.length; i++){
+    const currentTeam = team[i];
+    console.log('--------PERSONA--------');
+    console.log('name: ' + currentTeam.name);
+    console.log('role: ' + currentTeam.role);
+    console.log('img: ' + currentTeam.img);
+}
