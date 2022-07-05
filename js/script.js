@@ -70,8 +70,7 @@ for(let i = 0; i < team.length; i++){
             <h5 class="name-person">${currentTeam.name}</h5>
             <p class="description-person">${currentTeam.role}</p>
         </div>
-    </li>
-    <br>`;
+    </li>`;
     
     //2-Stampo su console le informazioni di nome, ruolo e la stringa della foto
     console.log('--------PERSONA--------');
