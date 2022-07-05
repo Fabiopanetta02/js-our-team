@@ -53,7 +53,6 @@ const team = [
         role: 'Graphic Designer',
         img: 'img/barbara-ramos-graphic-designer.jpg',
     }
-
 ];
 
 
@@ -66,7 +65,7 @@ for(let i = 0; i < team.length; i++){
     //Montaggio tag li
     message += 
     `<li>
-        <img src="${currentTeam.img}" alt="">
+        <img src="${currentTeam.img}" alt="" class="img-fluid">
         <div class="description">
             <h5 class="name-person">${currentTeam.name}</h5>
             <p class="description-person">${currentTeam.role}</p>

@@ -1,12 +1,14 @@
+/*? BACKGROUND COLOR */
 body{
     background-color: lightgray;
 }
 
-img{
-    width: 400px;
-    height: 429px;
+.description{
+    background-color: #fff;
+    text-align: center;
 }
 
+/*! GENERICS LISTA */
 ul{
     list-style-type: none
 }
@@ -16,17 +18,12 @@ li{
     padding: 10px;
 }
 
-.description{
-    background-color: #fff;
-}
-
+/* GENERICS CARD */
 .name-person{
-    text-align: center;
     padding-top: 10px;
 }
 
 .description-person{
-    text-align: center;
     padding-bottom: 10px;
 }
 
