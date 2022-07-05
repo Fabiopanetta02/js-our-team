@@ -5,13 +5,16 @@ Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
 //# MILESTONE 0:
 Creare l’array di oggetti con le informazioni fornite.
 
-# MILESTONE 1:
+//# MILESTONE 1:
 Stampare su console le informazioni di nome, ruolo e la stringa della foto
 
 # MILESTONE 2:
 Stampare le stesse informazioni su DOM sottoforma di stringhe
 */
 
+
+//RECUPERO GLI ELEMENTI DAL DOM
+const boardTeam = document.getElementById('board-team');
 
 //1- Creo array di oggetti con le informazioni fornite
 const team = [
@@ -49,10 +52,21 @@ const team = [
 ];
 
 //2-Stampo su console le informazioni di nome, ruolo e la stringa della foto
+let message = '';
+
 for(let i = 0; i < team.length; i++){
     const currentTeam = team[i];
+    message += `<li>--------PERSONA--------</li>`;
     console.log('--------PERSONA--------');
+
+    message += `<li>name: ${currentTeam.name}</li>`;
     console.log('name: ' + currentTeam.name);
+
+    message += `<li>role: ${currentTeam.role}</li>`;
     console.log('role: ' + currentTeam.role);
+
+    message += `<li>img: ${currentTeam.img}</li><br>`;
     console.log('img: ' + currentTeam.img);
 }
+
+boardTeam.innerHTML = message;
